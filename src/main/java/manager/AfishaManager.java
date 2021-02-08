@@ -24,5 +24,7 @@ public class AfishaManager {
 
     public void findById(int idToFind) {repository.findById(idToFind);}
 
+    public void removeAll() {repository.removeAll();}
+
 
 }
