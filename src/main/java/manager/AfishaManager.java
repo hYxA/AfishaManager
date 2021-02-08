@@ -1,9 +1,16 @@
 package manager;
 
 public class AfishaManager {
+    public AfishaManager(int countFilms) {
+    }
+
+    AfishaManager manager = new AfishaManager(5);
+
 
     // создание пустого массива
     private FilmItem[] items = new FilmItem[0];
+
+
 
     public void addFilm(FilmItem item) {
         int length = items.length + 1;
