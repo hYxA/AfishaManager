@@ -6,7 +6,6 @@ public class AfishaManager {
 
     AfishaManager manager = new AfishaManager(5);
 
-
     // создание пустого массива
     private FilmItem[] items = new FilmItem[0];
 
