@@ -1,13 +1,18 @@
 package manager;
 
 public class AfishaManager {
-    // создание пустого массива
-    private FilmItem[] items = new FilmItem[0];
-    AfishaManager manager = new AfishaManager(5);
+
+    private FilmItem[] items = new FilmItem[0];     // создание пустого массива
+    private int countFilms = 5;
+
+
     public AfishaManager(int countFilms) {
+        getItems(countFilms);
     }
 
-
+    public AfishaManager() {
+        getItems(10);
+    }
 
     public void addFilm(FilmItem item) {
         int length = items.length + 1;
@@ -16,12 +21,15 @@ public class AfishaManager {
         System.arraycopy(items, 0, tmp, 0, length);
     }
 
-    public FilmItem[] getItems() {
+    private FilmItem[] getItems(int countFilms) {
+        if (countFilms > items.length) {
+            countFilms = items.length;
+        }
         // создание массива для хранения результатов
-        FilmItem[] result = new FilmItem[items.length];
+        FilmItem[] result = new FilmItem[countFilms];
         // перебираем результаты
-        for (int i = 0; i < result.length; i++) {
-            int index = items.length - i - 1;
+        for (int i = 0; i < countFilms; i++) {
+            int index = countFilms - i - 1;
             result[i] = items[index];
         }
         return result;
