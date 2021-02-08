@@ -10,12 +10,13 @@ import manager.FilmItem;
 @Data
 
 public class AfishaRepository {
+
     private FilmItem[] items = new FilmItem[0];
     private int id;
     private int filmPrise;
     private String filmName;
     // создание массива для хранения результатов
-    FilmItem[] result = new FilmItem[items.length];
+    private FilmItem[] result = new FilmItem[items.length];
 
     public void save(FilmItem item) {
         int length = items.length + 1;
@@ -29,7 +30,7 @@ public class AfishaRepository {
         items = tmp;
     }
 
-    public FilmItem[] getAfisha() {
+    public FilmItem[] findAll() {
         // перебираем результаты
         for (int i = 0; i < result.length; i++) {
             int index = items.length - i - 1;
@@ -55,11 +56,22 @@ public class AfishaRepository {
         }
     }
 
+    public FilmItem findById(int idToFind) {
+        if (idToFind > items.length - 1) {
+            System.out.println("Не существует объекта с таким ID");
+            System.out.println("------------------");
+            return null;
+        } else {
+            System.out.println("Запрошенный элемент "+ items[idToFind]);
+            return items[idToFind];
+        }
+    }
+
 //TODO
-// findAll - возвращает массив всех хранящихся в массиве объектов
-// save - добавляет объект в массив
-// findById - возвращает объект по идентификатору (либо null, если такого объекта нет)
-// removeById - удаляет объект по идентификатору (если объекта нет, то пусть будет исключение, как на лекции)
+//  - возвращает массив всех хранящихся в массиве объектов
+// - добавляет объект в массив
+//  - возвращает объект по идентификатору (либо null, если такого объекта нет)
+//  - удаляет объект по идентификатору (если объекта нет, то пусть будет исключение, как на лекции)
 // removeAll* - полностью вычищает репозиторий
 
 

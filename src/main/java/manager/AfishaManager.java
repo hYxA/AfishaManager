@@ -16,11 +16,13 @@ public class AfishaManager {
 
     public void add(FilmItem item) {repository.save(item);}
 
-    public void getAll() {repository.getAfisha();}
+    public void getAll() {repository.findAll();}
 
-    public void addFilm(FilmItem item) {
+    public void addFilm(FilmItem item) {repository.save(item);}
 
-    }
+    public void removeById(int idToRemove) {repository.removeById(idToRemove);}
+
+    public void findById(int idToFind) {repository.findById(idToFind);}
 
 
 }
