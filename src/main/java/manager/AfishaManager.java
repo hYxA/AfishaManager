@@ -3,7 +3,7 @@ package manager;
 public class AfishaManager {
 
     private FilmItem[] items = new FilmItem[0];     // создание пустого массива
-    private int countFilms = 5;
+   // private int countFilms = 5;   // возможно можно обойтись без объявления тут
 
 
     public AfishaManager(int countFilms) {
