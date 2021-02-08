@@ -30,10 +30,13 @@ public class AfishaRepository {
         items = tmp;
     }
 
-    public FilmItem[] findAll() {
+    public FilmItem[] findAll(int countFilms) {
+        if (countFilms > items.length) {
+            countFilms = items.length;
+        }
         // перебираем результаты
-        for (int i = 0; i < result.length; i++) {
-            int index = items.length - i - 1;
+        for (int i = 0; i < countFilms; i++) {
+            int index = countFilms - i - 1;
             result[i] = items[index];
         }
         return result;

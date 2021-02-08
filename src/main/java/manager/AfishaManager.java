@@ -3,20 +3,21 @@ package manager;
 import repository.AfishaRepository;
 
 public class AfishaManager {
-    // создание пустого массива
-
-
-    public AfishaManager(int countFilms) {    }
-
-    AfishaManager manager = new AfishaManager(5);
 
     private AfishaRepository repository;
+
+
+    public AfishaManager(int countFilms) {
+        repository.findAll(countFilms);
+    }
+
+    public AfishaManager() {
+        repository.findAll(10);
+    }
 
     public AfishaManager(AfishaRepository repository) {this.repository = repository;}
 
     public void add(FilmItem item) {repository.save(item);}
-
-    public void getAll() {repository.findAll();}
 
     public void addFilm(FilmItem item) {repository.save(item);}
 
