@@ -10,12 +10,12 @@ import manager.FilmItem;
 @Data
 
 public class AfishaRepository {
-    // создание массива для хранения результатов
     private FilmItem[] items = new FilmItem[0];
-    FilmItem[] result = new FilmItem[items.length];
     private int id;
     private int filmPrise;
     private String filmName;
+    // создание массива для хранения результатов
+    FilmItem[] result = new FilmItem[items.length];
 
     public void save(FilmItem item) {
         int length = items.length + 1;
@@ -36,6 +36,23 @@ public class AfishaRepository {
             result[i] = items[index];
         }
         return result;
+    }
+
+    public void removeById(int idToRemove) {
+        if (idToRemove > items.length) {
+            System.out.println("Не существует объекта с таким ID");
+            System.out.println("------------------");
+            return;
+        }
+        int index = 0;
+        int length = items.length - 1;
+        FilmItem[] result = new FilmItem[length];
+        for (FilmItem item : items) {
+            if (item.getId() != idToRemove) {
+                result[index] = item;
+                index++;
+            }
+        }
     }
 
 //TODO
