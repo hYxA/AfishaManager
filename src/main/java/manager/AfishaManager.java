@@ -2,6 +2,9 @@ package manager;
 
 public class AfishaManager {
     public AfishaManager(int countFilms) {
+        int id;
+        int filmPrise;
+        String filmName;
     }
 
     AfishaManager manager = new AfishaManager(5);
