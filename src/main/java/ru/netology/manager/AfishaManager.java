@@ -6,7 +6,6 @@ public class AfishaManager {
 
     private AfishaRepository repository;
 
-
     public AfishaManager(int countFilms) {
         repository.findAll(countFilms);
     }
@@ -14,6 +13,7 @@ public class AfishaManager {
     public AfishaManager() {
         repository.findAll(10);
     }
+
 
     public AfishaManager(AfishaRepository repository) {this.repository = repository;}
 
