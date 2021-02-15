@@ -38,7 +38,21 @@ class AfishaManagerTest {
     @Test
     public void shouldSave() {
         manager.addFilm(first);
-        FilmItem[] expected = new FilmItem[]{first, second, third, first};
+        FilmItem[] expected = new FilmItem[]{
+                first,
+                second,
+                third,
+                four,
+                five,
+                six,
+                seven,
+                eight,
+                nine,
+                ten,
+                eleven,
+                twelve,
+                first
+        };
         FilmItem[] actual = manager.getAll();
 
         assertArrayEquals(expected, actual);
