@@ -92,6 +92,31 @@ class AfishaManagerTest {
     }
 
     @Test
+    public void shouldNOTRemoveById() {
+        int idToRemove = 22;
+        manager.removeById(idToRemove);
+
+        FilmItem[] expected = new FilmItem[]{
+                first,
+                second,
+                third,
+                four,
+                five,
+                six,
+                seven,
+                eight,
+                nine,
+                ten,
+                eleven,
+                twelve,
+                first
+        };
+        FilmItem[] actual = manager.getAll();
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
     public void findById() {
     }
 
