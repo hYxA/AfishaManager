@@ -1,8 +1,6 @@
 package ru.netology.manager;
 
 import org.junit.jupiter.api.BeforeEach;
-import ru.netology.manager.AfishaManager;
-import ru.netology.manager.FilmItem;
 import org.junit.Test;
 
 class AfishaManagerTest {
@@ -25,8 +23,6 @@ class AfishaManagerTest {
         FilmItem[] actual = manager.getAll();
 
     }
-
-
 
     @Test
     public void findAll() {
