@@ -1,6 +1,6 @@
-package manager;
+package ru.netology.manager;
 
-import repository.AfishaRepository;
+import ru.netology.repository.AfishaRepository;
 
 public class AfishaManager {
 

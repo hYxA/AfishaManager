@@ -1,9 +1,9 @@
-package repository;
+package ru.netology.repository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import manager.FilmItem;
+import ru.netology.manager.FilmItem;
 
 @NoArgsConstructor
 @AllArgsConstructor
