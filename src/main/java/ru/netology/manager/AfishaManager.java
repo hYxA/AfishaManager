@@ -5,6 +5,8 @@ import ru.netology.repository.AfishaRepository;
 public class AfishaManager {
 
     private AfishaRepository repository;
+    private FilmItem[] items = new FilmItem[0];
+
 
     public AfishaManager(AfishaRepository repository, int countFilms) {
         this.repository = repository;
@@ -28,7 +30,9 @@ public class AfishaManager {
 
     public void removeById(int idToRemove) {repository.removeById(idToRemove);}
 
-    public void findById(int idToFind) {repository.findById(idToFind);}
+    public FilmItem findById(int idToFind) {repository.findById(idToFind);
+        return items[idToFind];
+    }
 
     public void removeAll() {repository.removeAll();}
 

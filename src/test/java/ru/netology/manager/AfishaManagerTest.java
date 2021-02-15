@@ -117,7 +117,14 @@ class AfishaManagerTest {
     }
 
     @Test
-    public void findById() {
+    public void shouldFindById() {
+        FilmItem[] actual = new FilmItem[0];
+        FilmItem[] expected = new FilmItem[0];
+        int idToFind = 3;
+        actual = new FilmItem[]{manager.findById(idToFind)};
+        expected = new FilmItem[]{four};
+
+        assertArrayEquals(expected, actual);
     }
 
     @Test
