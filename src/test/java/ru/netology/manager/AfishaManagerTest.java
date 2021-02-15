@@ -60,6 +60,7 @@ class AfishaManagerTest {
 
     @Test
     public void findAllTen() {
+        FilmItem[] result = manager.fi
 
     }
 
