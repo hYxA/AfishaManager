@@ -2,10 +2,14 @@ package ru.netology.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.Test;
+import ru.netology.repository.AfishaRepository;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class AfishaManagerTest {
-    private AfishaManager manager = new AfishaManager();
+    private AfishaRepository repository = new AfishaRepository();
+    private AfishaManager manager = new AfishaManager(repository);
+
     private FilmItem first = new FilmItem(1, 300, "first");
     private FilmItem second = new FilmItem(2, 250, "second");
     private FilmItem third = new FilmItem(3, 550, "third");
@@ -60,8 +64,7 @@ class AfishaManagerTest {
 
     @Test
     public void findAllTen() {
-        FilmItem[] result = new AfishaManager();
-
+    // TODO прикрутить количество фильмов и конструктор
     }
 
     @Test

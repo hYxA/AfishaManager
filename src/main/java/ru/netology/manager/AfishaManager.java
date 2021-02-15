@@ -16,7 +16,7 @@ public class AfishaManager {
         this.repository = repository;
         this.repository.findAll(10);
     }
-    
+
 
     public FilmItem[] getAll() {
         FilmItem[] result = new FilmItem[0];
