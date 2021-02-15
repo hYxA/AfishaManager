@@ -17,7 +17,11 @@ public class AfishaManager {
 
     public AfishaManager(AfishaRepository repository) {this.repository = repository;}
 
-    public void add(FilmItem item) {repository.save(item);}
+    public FilmItem[] getAll() {
+        FilmItem[] result = new FilmItem[0];
+        result = repository.getAll();
+        return result;
+    }
 
     public void addFilm(FilmItem item) {repository.save(item);}
 
