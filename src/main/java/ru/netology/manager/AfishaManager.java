@@ -4,20 +4,18 @@ import ru.netology.repository.AfishaRepository;
 
 public class AfishaManager {
 
+    private int countFilms;
     private AfishaRepository repository;
     private FilmItem[] items = new FilmItem[0];
 
 
-    public AfishaManager(AfishaRepository repository, int countFilms) {
-        this.repository = repository;
-        this.repository.findAll(countFilms);
+    public AfishaManager(int countFilms) {
+        this.countFilms = countFilms;
     }
 
 
-    public AfishaManager(AfishaRepository repository) {
-        this.repository = repository;
-        this.repository.findAll(10);
-    }
+    public AfishaManager() {
+        }
 
 
     public FilmItem[] getAll() {
