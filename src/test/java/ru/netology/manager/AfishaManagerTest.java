@@ -64,8 +64,7 @@ class AfishaManagerTest {
     }
 
     @Test
-    public void findAll() {
-    // TODO прикрутить количество фильмов и конструктор
+    public void shouldFindAll5() {
         AfishaManager manager5 = new AfishaManager(5);
         FilmItem[] actual = manager5.findAll();
 
@@ -77,8 +76,7 @@ class AfishaManagerTest {
                 eight
         };
 
-
-
+        assertArrayEquals(expected, actual);
     }
 
     @Test
