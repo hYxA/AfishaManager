@@ -8,7 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class AfishaManagerTest {
     private AfishaRepository repository = new AfishaRepository();
-    private AfishaManager manager = new AfishaManager(repository);
+    private AfishaManager manager5 = new AfishaManager(5);
+    private AfishaManager manager = new AfishaManager();
 
     private FilmItem first = new FilmItem(1, 300, "first");
     private FilmItem second = new FilmItem(2, 250, "second");
@@ -63,8 +64,9 @@ class AfishaManagerTest {
     }
 
     @Test
-    public void findAllTen() {
+    public void findAll() {
     // TODO прикрутить количество фильмов и конструктор
+
     }
 
     @Test
