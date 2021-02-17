@@ -15,7 +15,8 @@ public class AfishaManager {
 
 
     public AfishaManager() {
-        }
+        this.countFilms = 10;
+    }
 
 
     public FilmItem[] getAll() {
