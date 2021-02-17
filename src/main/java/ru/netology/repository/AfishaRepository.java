@@ -31,9 +31,7 @@ public class AfishaRepository {
     }
 
     public FilmItem[] getAll() {
-        for (int i = 0; i < items.length; i++) {
-            result[i] = items[i];
-        }
+        System.arraycopy(items, 0, result, 0, items.length);
         return result;
     }
 

@@ -24,6 +24,12 @@ public class AfishaManager {
         return result;
     }
 
+    public FilmItem[] findAll() {
+        FilmItem[] result = new FilmItem[0];
+        repository.findAll();
+        return result;
+    }
+
     public void addFilm(FilmItem item) {repository.save(item);}
 
     public void removeById(int idToRemove) {repository.removeById(idToRemove);}
