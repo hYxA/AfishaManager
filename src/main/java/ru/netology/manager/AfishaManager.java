@@ -19,8 +19,7 @@ public class AfishaManager {
 
 
     public FilmItem[] getAll() {
-        FilmItem[] result = new FilmItem[0];
-        result = repository.getAll();
+        FilmItem[] result = repository.getAll();
         return result;
     }
 
