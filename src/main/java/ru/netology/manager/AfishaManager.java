@@ -3,7 +3,7 @@ package ru.netology.manager;
 import ru.netology.repository.AfishaRepository;
 
 public class AfishaManager {
-    private int countFilms;
+    int countFilms;
     private AfishaRepository repository;
     private FilmItem[] items = new FilmItem[0];
 

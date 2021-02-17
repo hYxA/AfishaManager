@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class AfishaManagerTest {
     private AfishaRepository repository = new AfishaRepository();
-    //private AfishaManager manager5 = new AfishaManager(5);
     private AfishaManager manager;
 
     private FilmItem first = new FilmItem(1, 300, "first");
