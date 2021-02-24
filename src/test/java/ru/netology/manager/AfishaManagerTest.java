@@ -10,18 +10,18 @@ class AfishaManagerTest {
     private AfishaRepository repository = new AfishaRepository();
     private AfishaManager manager;
 
-    private FilmItem first = new FilmItem(1, 300, "first");
-    private FilmItem second = new FilmItem(2, 250, "second");
-    private FilmItem third = new FilmItem(3, 550, "third");
-    private FilmItem four = new FilmItem(4, 300, "four");
-    private FilmItem five = new FilmItem(5, 250, "five");
-    private FilmItem six = new FilmItem(6, 550, "six");
-    private FilmItem seven = new FilmItem(7, 300, "seven");
-    private FilmItem eight = new FilmItem(8, 250, "eight");
-    private FilmItem nine = new FilmItem(9, 550, "nine");
-    private FilmItem ten = new FilmItem(10, 300, "ten");
-    private FilmItem eleven = new FilmItem(11, 250, "eleven");
-    private FilmItem twelve = new FilmItem(12, 550, "twelve");
+    private final FilmItem first = new FilmItem(1, 300, "first");
+    private final FilmItem second = new FilmItem(2, 250, "second");
+    private final FilmItem third = new FilmItem(3, 550, "third");
+    private final FilmItem four = new FilmItem(4, 300, "four");
+    private final FilmItem five = new FilmItem(5, 250, "five");
+    private final FilmItem six = new FilmItem(6, 550, "six");
+    private final FilmItem seven = new FilmItem(7, 300, "seven");
+    private final FilmItem eight = new FilmItem(8, 250, "eight");
+    private final FilmItem nine = new FilmItem(9, 550, "nine");
+    private final FilmItem ten = new FilmItem(10, 300, "ten");
+    private final FilmItem eleven = new FilmItem(11, 250, "eleven");
+    private final FilmItem twelve = new FilmItem(12, 550, "twelve");
 
     @BeforeEach
     void prepareManager() {
