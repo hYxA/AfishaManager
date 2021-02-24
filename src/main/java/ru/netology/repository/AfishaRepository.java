@@ -22,7 +22,7 @@ public class AfishaRepository {
         int length = items.length + 1;
         FilmItem[] tmp = new FilmItem[length];
         // копируем поэлементно
-        System.arraycopy(items, 0, tmp, 0, length);
+        System.arraycopy(items, 0, tmp, 0, items.length);
 
         // кладём последним наш элемент
         int lastIndex = tmp.length - 1;

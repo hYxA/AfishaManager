@@ -4,7 +4,7 @@ import ru.netology.repository.AfishaRepository;
 
 public class AfishaManager {
     int countFilms;
-    private AfishaRepository repository;
+    private AfishaRepository repository = new AfishaRepository();
     private FilmItem[] items = new FilmItem[0];
 
 
