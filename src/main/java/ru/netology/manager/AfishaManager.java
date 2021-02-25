@@ -8,13 +8,14 @@ public class AfishaManager {
     private FilmItem[] items = new FilmItem[0];
 
 
-    public AfishaManager(int countFilms) {
-        AfishaRepository repository;
+    public AfishaManager(AfishaRepository repository, int countFilms) {
+        this.repository = repository;
         this.countFilms = countFilms;
     }
 
 
     public AfishaManager(AfishaRepository repository) {
+        this.repository = repository;
         this.countFilms = 10;
     }
 
