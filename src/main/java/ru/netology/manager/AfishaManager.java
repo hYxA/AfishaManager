@@ -16,7 +16,6 @@ public class AfishaManager {
 
     public AfishaManager(AfishaRepository repository) {
         this.repository = repository;
-        this.countFilms = 10;
     }
 
 
