@@ -57,7 +57,7 @@ class AfishaManagerTest {
                 twelve,
                 first
         };
-        FilmItem[] actual = manager.findAll();
+        FilmItem[] actual = manager.getAll();
 
         assertArrayEquals(expected, actual);
     }
@@ -65,7 +65,7 @@ class AfishaManagerTest {
     @Test
     public void shouldFindAll5() {
         AfishaManager manager5 = new AfishaManager(repository, 5);
-        FilmItem[] actual = manager5.findAll();
+        FilmItem[] actual = manager5.getAll();
 
         FilmItem[] expected = new FilmItem[]{
                 twelve,
@@ -97,7 +97,7 @@ class AfishaManagerTest {
                 twelve,
                 first
         };
-        FilmItem[] actual = manager.findAll();
+        FilmItem[] actual = manager.getAll();
 
         assertArrayEquals(expected, actual);
     }
@@ -122,7 +122,7 @@ class AfishaManagerTest {
                 twelve,
                 first
         };
-        FilmItem[] actual = manager.findAll();
+        FilmItem[] actual = manager.getAll();
 
         assertArrayEquals(expected, actual);
     }
@@ -140,7 +140,7 @@ class AfishaManagerTest {
     public void removeAll() {
         manager.removeAll();
         FilmItem[] expected = new FilmItem[0];
-        FilmItem[] actual = manager.findAll();
+        FilmItem[] actual = manager.getAll();
 
         assertArrayEquals(expected, actual);
     }
