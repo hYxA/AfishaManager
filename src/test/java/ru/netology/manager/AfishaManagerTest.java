@@ -76,7 +76,7 @@ class AfishaManagerTest {
 
         assertArrayEquals(expected, actual);
     }
-/* TODO Выкинуть в отдельный файл для отсутствия предусловия*/
+
     @Test
     public void shouldRemoveById() {
         int idToRemove = 2;
@@ -135,12 +135,5 @@ class AfishaManagerTest {
         assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void removeAll() {
-        manager.removeAll();
-        FilmItem[] expected = new FilmItem[0];
-        FilmItem[] actual = manager.getAll();
 
-        assertArrayEquals(expected, actual);
-    }
 }
