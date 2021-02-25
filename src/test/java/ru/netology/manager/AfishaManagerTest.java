@@ -118,8 +118,7 @@ class AfishaManagerTest {
                 nine,
                 ten,
                 eleven,
-                twelve,
-                first
+                twelve
         };
         FilmItem[] actual = manager.getAll();
 
