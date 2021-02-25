@@ -16,7 +16,7 @@ public class AfishaRepository {
     private int filmPrise;
     private String filmName;
     // создание массива для хранения результатов
-    private FilmItem[] result = new FilmItem[items.length];
+    FilmItem[] result = new FilmItem[items.length];
 
     public void save(FilmItem item) {
         int length = items.length + 1;

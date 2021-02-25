@@ -19,13 +19,13 @@ public class AfishaManager {
 
 
     public FilmItem[] getAll() {
-        FilmItem[] result = repository.getAll();
+        FilmItem[] result = repository.getResult();
         return result;
     }
 
     public FilmItem[] findAll() {
-        FilmItem[] result = new FilmItem[0];
-        repository.findAll();
+        FilmItem[] result = repository.findAll();
+
         return result;
     }
 
