@@ -3,6 +3,7 @@ package ru.netology.manager;
 import ru.netology.repository.AfishaRepository;
 
 public class AfishaManager {
+    final int countFilmsDefault = 10;
     int countFilms;
     private AfishaRepository repository = new AfishaRepository();
     private FilmItem[] items = new FilmItem[0];
@@ -19,8 +20,14 @@ public class AfishaManager {
     }
 
 
-    public FilmItem[] findAll() {
+    public FilmItem[] getAll() {
         return repository.getItems();
+    }
+
+    public FilmItem[] getAll(int countFilms) {
+        FilmItem[] result = new FilmItem[countFilms];
+        System.arraycopy(items, 0, result, 0, countFilms);
+        return result;
     }
 
     public void addFilm(FilmItem item) {repository.save(item);}
