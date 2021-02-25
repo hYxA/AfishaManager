@@ -7,9 +7,8 @@ import ru.netology.repository.AfishaRepository;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class AfishaManagerTest {
-    AfishaManager manager = new AfishaManager();
-    AfishaRepository Repository = new AfishaRepository();
-
+    AfishaRepository repository = new AfishaRepository();
+    AfishaManager manager = new AfishaManager(repository);
 
     private final FilmItem first = new FilmItem(1, 300, "first");
     private final FilmItem second = new FilmItem(2, 250, "second");

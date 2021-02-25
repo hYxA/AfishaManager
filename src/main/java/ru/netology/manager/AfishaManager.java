@@ -9,12 +9,12 @@ public class AfishaManager {
 
 
     public AfishaManager(int countFilms) {
-        AfishaRepository repository = new AfishaRepository();
+        AfishaRepository repository;
         this.countFilms = countFilms;
     }
 
 
-    public AfishaManager() {
+    public AfishaManager(AfishaRepository repository) {
         this.countFilms = 10;
     }
 
