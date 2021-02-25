@@ -20,14 +20,7 @@ public class AfishaManager {
     }
 
 
-   /* public FilmItem[] getAll() {
-      //  FilmItem[] result = repository.getResult();
-        return result;
-  */
-
     public FilmItem[] findAll() {
-       // FilmItem[] result = repository.findAll();
-
         return repository.getItems();
     }
 
