@@ -9,6 +9,7 @@ public class AfishaManager {
 
 
     public AfishaManager(int countFilms) {
+        AfishaRepository repository = new AfishaRepository();
         this.countFilms = countFilms;
     }
 
