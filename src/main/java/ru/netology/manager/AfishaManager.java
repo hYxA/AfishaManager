@@ -28,7 +28,7 @@ public class AfishaManager {
     public FilmItem[] findAll() {
        // FilmItem[] result = repository.findAll();
 
-        return items;
+        return repository.getItems();
     }
 
     public void addFilm(FilmItem item) {repository.save(item);}
