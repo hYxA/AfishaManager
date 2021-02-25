@@ -64,7 +64,7 @@ class AfishaManagerTest {
 
     @Test
     public void shouldFindAll5() {
-        AfishaManager manager5 = new AfishaManager(5);
+        AfishaManager manager5 = new AfishaManager(repository, 5);
         FilmItem[] actual = manager5.findAll();
 
         FilmItem[] expected = new FilmItem[]{
