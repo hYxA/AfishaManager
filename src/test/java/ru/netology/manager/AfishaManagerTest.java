@@ -3,7 +3,6 @@ package ru.netology.manager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.repository.AfishaRepository;
-
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class AfishaManagerTest {
@@ -64,8 +63,8 @@ class AfishaManagerTest {
 
     @Test
     public void shouldFindAll5() {
-        AfishaManager manager5 = new AfishaManager(repository, 5);
-        FilmItem[] actual = manager5.getAll();
+        AfishaManager manager = new AfishaManager(repository, 5);
+        FilmItem[] actual = manager.getAll(manager.countFilms);
 
         FilmItem[] expected = new FilmItem[]{
                 twelve,
