@@ -77,7 +77,7 @@ class AfishaManagerTest {
 
         assertArrayEquals(expected, actual);
     }
-
+/* TODO Выкинуть в отдельный файл для отсутствия предусловия*/
     @Test
     public void shouldRemoveById() {
         int idToRemove = 2;
