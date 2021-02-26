@@ -1,5 +1,7 @@
 package manager;
 
+import static java.lang.System.arraycopy;
+
 public class AfishaManager {
 
     private int countFilms;
@@ -18,10 +20,10 @@ public class AfishaManager {
         int length = items.length + 1;
         FilmItem[] tmp = new FilmItem[length];
         // копируем поэлементно
-        System.arraycopy(items, 0, tmp, 0, length);
+        arraycopy(items, 0, tmp, 0, length);
     }
 
-    private FilmItem[] getItems(int countFilms) {
+    public FilmItem[] getItems(int countFilms) {
         if (countFilms > items.length) {
             countFilms = items.length;
         }
