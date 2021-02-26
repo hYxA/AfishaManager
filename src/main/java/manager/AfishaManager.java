@@ -2,16 +2,16 @@ package manager;
 
 public class AfishaManager {
 
+    private int countFilms;
     private FilmItem[] items = new FilmItem[0];     // создание пустого массива
-   // private int countFilms = 5;   // возможно можно обойтись без объявления тут
 
 
     public AfishaManager(int countFilms) {
-        getItems(countFilms);
+        this.countFilms = countFilms;
     }
 
     public AfishaManager() {
-        getItems(10);
+        countFilms = 10;
     }
 
     public void addFilm(FilmItem item) {
