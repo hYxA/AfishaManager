@@ -61,27 +61,13 @@ class AfishaManagerTest {
         assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void shouldFindAll5() {
-        AfishaManager manager = new AfishaManager(repository, 5);
-        FilmItem[] actual = manager.getAll(manager.countFilms);
 
-        FilmItem[] expected = new FilmItem[]{
-                twelve,
-                eleven,
-                ten,
-                nine,
-                eight
-        };
-
-        assertArrayEquals(expected, actual);
-    }
 
     @Test
     public void shouldRemoveById() {
-        int idToRemove = 2;
+        int idToRemove = 3;
+        FilmItem[] actual = manager.getAll();
         manager.removeById(idToRemove);
-
         FilmItem[] expected = new FilmItem[]{
                 first,
                 second,
@@ -96,7 +82,7 @@ class AfishaManagerTest {
                 twelve,
                 first
         };
-        FilmItem[] actual = manager.getAll();
+
 
         assertArrayEquals(expected, actual);
     }

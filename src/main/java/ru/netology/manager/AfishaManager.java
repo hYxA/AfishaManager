@@ -14,7 +14,6 @@ public class AfishaManager {
         this.countFilms = countFilms;
     }
 
-
     public AfishaManager(AfishaRepository repository) {
         this.repository = repository;
     }
@@ -26,19 +25,25 @@ public class AfishaManager {
 
     public FilmItem[] getAll(int countFilms) {
         FilmItem[] result = new FilmItem[countFilms];
-        System.arraycopy(items, 0, result, 0, countFilms);
+        System.arraycopy(repository.getItems(), 0, result, 0, countFilms);
         return result;
     }
 
-    public void addFilm(FilmItem item) {repository.save(item);}
-
-    public void removeById(int idToRemove) {repository.removeById(idToRemove);}
-
-    public FilmItem findById(int idToFind) {repository.findById(idToFind);
-        return items[idToFind];
+    public void addFilm(FilmItem item) {
+        repository.save(item);
     }
 
-    public void removeAll() {repository.removeAll();}
+    public void removeById(int idToRemove) {
+        repository.removeById(idToRemove);
+    }
+
+    public FilmItem findById(int idToFind) {
+        return repository.findById(idToFind);
+    }
+
+    public void removeAll() {
+        repository.removeAll();
+    }
 
 
 }
