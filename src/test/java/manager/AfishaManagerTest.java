@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AfishaManagerTest {
-   // AfishaManager manager = new AfishaManager();
+    AfishaManager manager = new AfishaManager();
 
     final FilmItem first = new FilmItem(1, 300, "first");
     final FilmItem second = new FilmItem(2, 250, "second");
@@ -22,7 +22,7 @@ class AfishaManagerTest {
 
 
     void prepareManager() {
-        AfishaManager manager = new AfishaManager();
+       // AfishaManager manager = new AfishaManager();
         manager.addFilm(first);
         manager.addFilm(second);
         manager.addFilm(third);
@@ -40,7 +40,7 @@ class AfishaManagerTest {
     @Test
     public void shouldSave() {
         prepareManager();
-        AfishaManager manager = new AfishaManager();
+      //  AfishaManager manager = new AfishaManager();
 
         int countFilms = 5;
         manager.addFilm(first);

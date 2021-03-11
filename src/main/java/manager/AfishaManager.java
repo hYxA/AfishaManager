@@ -4,7 +4,7 @@ import static java.lang.System.arraycopy;
 
 public class AfishaManager {
 
-    private int countFilms;
+    private int countFilms = 10;
     private FilmItem[] items = new FilmItem[0];     // создание пустого массива
 
 
@@ -13,7 +13,7 @@ public class AfishaManager {
     }
 
     public AfishaManager() {
-        countFilms = 10;
+
     }
 
     public void addFilm(FilmItem item) {
