@@ -20,7 +20,12 @@ public class AfishaManager {
         int length = items.length + 1;
         FilmItem[] tmp = new FilmItem[length];
         // копируем поэлементно
-        arraycopy(items, 0, tmp, 0, length);
+        arraycopy(items, 0, tmp, 0, length - 1);
+
+        // кладём последним наш элемент
+        int lastIndex = tmp.length - 1;
+        tmp[lastIndex] = item;
+        items = tmp;
     }
 
     public FilmItem[] getItems(int countFilms) {
