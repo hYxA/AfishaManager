@@ -1,11 +1,12 @@
 package manager;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AfishaManagerTest {
-    AfishaManager manager = new AfishaManager();
+    AfishaManager manager = new AfishaManager(5);
 
     final FilmItem first = new FilmItem(1, 300, "first");
     final FilmItem second = new FilmItem(2, 250, "second");
@@ -20,9 +21,8 @@ class AfishaManagerTest {
     final FilmItem eleven = new FilmItem(11, 250, "eleven");
     final FilmItem twelve = new FilmItem(12, 550, "twelve");
 
-
+    @BeforeEach
     void prepareManager() {
-       // AfishaManager manager = new AfishaManager();
         manager.addFilm(first);
         manager.addFilm(second);
         manager.addFilm(third);
@@ -39,8 +39,6 @@ class AfishaManagerTest {
 
     @Test
     public void shouldSave() {
-        prepareManager();
-      //  AfishaManager manager = new AfishaManager();
 
         int countFilms = 5;
         manager.addFilm(first);
