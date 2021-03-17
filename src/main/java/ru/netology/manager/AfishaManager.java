@@ -1,4 +1,6 @@
-package manager;
+package ru.netology.manager;
+
+import ru.netology.domain.FilmItem;
 
 import static java.lang.System.arraycopy;
 
