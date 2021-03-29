@@ -30,7 +30,8 @@ public class AfishaManager {
         items = tmp;
     }
 
-    public FilmItem[] getItems(int countFilms) {
+    public FilmItem[] getItems() {
+        AfishaManager manager = new AfishaManager(10);
         int count;
         if (countFilms > items.length) {
             count = items.length;

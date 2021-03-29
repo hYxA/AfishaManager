@@ -50,7 +50,7 @@ class AfishaManagerTest {
                 second,
                 first
         };
-        FilmItem[] actual = manager.getItems(countFilms);
+        FilmItem[] actual = manager.getItems();
 
         assertArrayEquals(expected, actual);
     }
