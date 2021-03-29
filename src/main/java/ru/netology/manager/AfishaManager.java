@@ -33,7 +33,7 @@ public class AfishaManager {
         items = tmp;
     }
 
-    public FilmItem[] getItems(int countFilms) {
+    public FilmItem[] getItems() {
        // int count = 10;
 
         FilmItem[] result = new FilmItem[countFilms];
