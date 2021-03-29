@@ -15,8 +15,11 @@ public class AfishaManager {
     }
 
     public AfishaManager() {
+        this.countFilms = 10;
 
     }
+
+//    AfishaManager manager = new AfishaManager();
 
     public void addFilm(FilmItem item) {
         int length = items.length + 1;
@@ -30,19 +33,13 @@ public class AfishaManager {
         items = tmp;
     }
 
-    public FilmItem[] getItems() {
-        AfishaManager manager = new AfishaManager(10);
-        int count;
-        if (countFilms > items.length) {
-            count = items.length;
-        } else {
-            count = countFilms;
-        }
-        // создание массива для хранения результатов
-        FilmItem[] result = new FilmItem[count];
+    public FilmItem[] getItems(int countFilms) {
+       // int count = 10;
+
+        FilmItem[] result = new FilmItem[countFilms];
         // перебираем результаты
-        for (int i = 0; i < count; i++) {
-            int index = count - i - 1;
+        for (int i = 0; i < countFilms; i++) {
+            int index = countFilms - i - 1;
             result[i] = items[index];
         }
         return result;
