@@ -54,6 +54,11 @@ class AfishaManager10Test {
     public void shouldSave() {
         manager.addFilm(first);
         FilmItem[] expected = new FilmItem[]{
+                ten,
+                nine,
+                eight,
+                seven,
+                six,
                 five,
                 four,
                 third,
