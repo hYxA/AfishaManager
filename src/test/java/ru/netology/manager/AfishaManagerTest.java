@@ -3,6 +3,7 @@ package ru.netology.manager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.FilmItem;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class AfishaManagerTest {
@@ -41,18 +42,10 @@ class AfishaManagerTest {
     public void shouldSave() {
         manager.addFilm(first);
         FilmItem[] expected = new FilmItem[]{
-                first,
-                second,
-                third,
-                four,
                 five,
-                six,
-                seven,
-                eight,
-                nine,
-                ten,
-                eleven,
-                twelve,
+                four,
+                third,
+                second,
                 first
         };
         FilmItem[] actual = manager.getItems();
