@@ -70,4 +70,22 @@ class AfishaManager10Test {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void shouldGetAll() {
+        FilmItem[] actual = manager.getItems();
+        FilmItem[] expected = {
+                ten,
+                nine,
+                eight,
+                seven,
+                six,
+                five,
+                four,
+                third,
+                second,
+                first
+        };
+        assertArrayEquals(expected, actual);
+    }
+
 }
