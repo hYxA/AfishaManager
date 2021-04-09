@@ -54,16 +54,16 @@ class AfishaManager10Test {
     public void shouldSave() {
         manager.addFilm(first);
         FilmItem[] expected = new FilmItem[]{
+                first,
+                twelve,
+                eleven,
                 ten,
                 nine,
                 eight,
                 seven,
                 six,
                 five,
-                four,
-                third,
-                second,
-                first
+                four
         };
         FilmItem[] actual = manager.getItems();
 
@@ -74,6 +74,8 @@ class AfishaManager10Test {
     public void shouldGetAll() {
         FilmItem[] actual = manager.getItems();
         FilmItem[] expected = {
+                twelve,
+                eleven,
                 ten,
                 nine,
                 eight,
@@ -81,9 +83,7 @@ class AfishaManager10Test {
                 six,
                 five,
                 four,
-                third,
-                second,
-                first
+                third
         };
         assertArrayEquals(expected, actual);
     }
