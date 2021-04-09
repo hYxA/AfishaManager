@@ -38,8 +38,8 @@ public class AfishaManager {
         FilmItem[] result = new FilmItem[countFilms];
         // перебираем результаты
         for (int i = 0; i < countFilms; i++) {
-            if (items[i] != null) {
-                int index = countFilms - i - 1;
+            int index = items.length - i - 1;
+            if (items[index] != null) {
                 result[i] = items[index];
             }
         }

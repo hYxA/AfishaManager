@@ -52,7 +52,7 @@ class AfishaManagerNegativeTest {
                 null,
                 null,
                 null,
-                null,
+                null
         };
         assertArrayEquals(expected, actual);
     }
