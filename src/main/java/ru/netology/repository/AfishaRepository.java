@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.netology.manager.FilmItem;
 
+import static java.lang.System.arraycopy;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -22,7 +24,7 @@ public class AfishaRepository {
         int length = items.length + 1;
         FilmItem[] tmp = new FilmItem[length];
         // копируем поэлементно
-        System.arraycopy(items, 0, tmp, 0, items.length);
+        arraycopy(items, 0, tmp, 0, items.length);
 
         // кладём последним наш элемент
         int lastIndex = tmp.length - 1;
@@ -30,18 +32,22 @@ public class AfishaRepository {
         items = tmp;
     }
 
-    public FilmItem[] getAll() {
-        System.arraycopy(items, 0, result, 0, items.length);
-        return result;
-    }
-
-    public FilmItem[] findAll() {
-
+    public FilmItem[] getItems() {
+        FilmItem[] draftResult = new FilmItem[items.length];
+        int counter = 0;
         // перебираем результаты
         for (int i = 0; i < items.length; i++) {
             int index = items.length - i - 1;
-            result[i] = items[index];
+            if (items[index] != null) {
+                // выборка ненулевых значений
+                draftResult[counter] = items[index];
+                counter += 1;
+            }
         }
+        // создание массива с нужной длиной
+        FilmItem[] result = new FilmItem[counter];
+        arraycopy(draftResult, 0, result, 0, counter);
+
         return result;
     }
 
