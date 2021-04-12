@@ -19,8 +19,6 @@ public class AfishaManager {
 
     }
 
-//    AfishaManager manager = new AfishaManager();
-
     public void addFilm(FilmItem item) {
         int length = items.length + 1;
         FilmItem[] tmp = new FilmItem[length];
