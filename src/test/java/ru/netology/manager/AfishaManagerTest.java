@@ -56,85 +56,16 @@ class AfishaManagerTest {
         manager.addFilm(first);
         FilmItem[] expected = new FilmItem[]{
                 first,
-                second,
-                third,
-                four,
-                five,
-                six,
-                seven,
-                eight,
-                nine,
-                ten,
-                eleven,
                 twelve,
-                first
+                eleven,
+                ten,
+                nine
         };
         FilmItem[] actual = manager.getItems();
 
         assertArrayEquals(expected, actual);
     }
 
-
-
-/*
-    @Test
-    public void shouldRemoveById() {
-        int idToRemove = 3;
-        FilmItem[] actual = manager.getItems();
-        manager.removeById(idToRemove);
-        FilmItem[] expected = new FilmItem[]{
-                first,
-                second,
-                four,
-                five,
-                six,
-                seven,
-                eight,
-                nine,
-                ten,
-                eleven,
-                twelve,
-                first
-        };
-
-
-
-        assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldNOTRemoveById() {
-        int idToRemove = 22;
-        manager.removeById(idToRemove);
-
-        FilmItem[] expected = new FilmItem[]{
-                first,
-                second,
-                third,
-                four,
-                five,
-                six,
-                seven,
-                eight,
-                nine,
-                ten,
-                eleven,
-                twelve
-        };
-        FilmItem[] actual = manager.getAll();
-
-        assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldFindById() {
-        int idToFind = 3;
-        FilmItem[] actual = new FilmItem[]{manager.findById(idToFind)};
-        FilmItem[] expected = new FilmItem[]{four};
-
-        assertArrayEquals(expected, actual);
-    }
-*/
     @Test
     public void shouldGetAll() {
         FilmItem[] actual = manager.getItems();
