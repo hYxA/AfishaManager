@@ -43,17 +43,17 @@ class AfishaManagerTest {
         manager.addFilm(first);
         FilmItem[] expected = new FilmItem[]{
                 first,
-                second,
-                third,
-                four,
-                five,
-                six,
-                seven,
-                eight,
-                nine,
-                ten,
-                eleven,
                 twelve,
+                eleven,
+                ten,
+                nine,
+                eight,
+                seven,
+                six,
+                five,
+                four,
+                third,
+                second,
                 first
         };
         FilmItem[] actual = manager.getAll();
@@ -61,25 +61,23 @@ class AfishaManagerTest {
         assertArrayEquals(expected, actual);
     }
 
-
-
     @Test
     public void shouldRemoveById() {
         int idToRemove = 3;
         FilmItem[] actual = manager.getAll();
         manager.removeById(idToRemove);
         FilmItem[] expected = new FilmItem[]{
-                first,
-                second,
-                four,
-                five,
-                six,
-                seven,
-                eight,
-                nine,
-                ten,
-                eleven,
                 twelve,
+                eleven,
+                ten,
+                nine,
+                eight,
+                seven,
+                six,
+                five,
+                four,
+                third,
+                second,
                 first
         };
 
@@ -93,18 +91,18 @@ class AfishaManagerTest {
         manager.removeById(idToRemove);
 
         FilmItem[] expected = new FilmItem[]{
-                first,
-                second,
-                third,
-                four,
-                five,
-                six,
-                seven,
-                eight,
-                nine,
-                ten,
+                twelve,
                 eleven,
-                twelve
+                ten,
+                nine,
+                eight,
+                seven,
+                six,
+                five,
+                four,
+                third,
+                second,
+                first
         };
         FilmItem[] actual = manager.getAll();
 
