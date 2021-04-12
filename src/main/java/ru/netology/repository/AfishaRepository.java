@@ -80,7 +80,8 @@ public class AfishaRepository {
     }
 
     public void removeAll() {
-        FilmItem[] items = new FilmItem[0];
+        FilmItem[] tmp = new FilmItem[0];
+        items = tmp;
     }
 
 }

@@ -118,5 +118,12 @@ class AfishaManagerTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void removeAll() {
+        FilmItem[] expected = new FilmItem[0];
+        manager.removeAll();
+        FilmItem[] actual = manager.getAll();
 
+        assertArrayEquals(expected, actual);
+    }
 }
