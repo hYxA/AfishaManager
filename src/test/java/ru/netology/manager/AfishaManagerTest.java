@@ -7,6 +7,7 @@ import ru.netology.domain.FilmItem;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class AfishaManagerTest {
+   // AfishaRepository repository = new AfishaRepository();
     AfishaManager manager = new AfishaManager(5);
 
     private final FilmItem first = new FilmItem(
@@ -55,16 +56,85 @@ class AfishaManagerTest {
         manager.addFilm(first);
         FilmItem[] expected = new FilmItem[]{
                 first,
-                twelve,
-                eleven,
+                second,
+                third,
+                four,
+                five,
+                six,
+                seven,
+                eight,
+                nine,
                 ten,
-                nine
+                eleven,
+                twelve,
+                first
         };
         FilmItem[] actual = manager.getItems();
 
         assertArrayEquals(expected, actual);
     }
 
+
+
+/*
+    @Test
+    public void shouldRemoveById() {
+        int idToRemove = 3;
+        FilmItem[] actual = manager.getItems();
+        manager.removeById(idToRemove);
+        FilmItem[] expected = new FilmItem[]{
+                first,
+                second,
+                four,
+                five,
+                six,
+                seven,
+                eight,
+                nine,
+                ten,
+                eleven,
+                twelve,
+                first
+        };
+
+
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNOTRemoveById() {
+        int idToRemove = 22;
+        manager.removeById(idToRemove);
+
+        FilmItem[] expected = new FilmItem[]{
+                first,
+                second,
+                third,
+                four,
+                five,
+                six,
+                seven,
+                eight,
+                nine,
+                ten,
+                eleven,
+                twelve
+        };
+        FilmItem[] actual = manager.getAll();
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindById() {
+        int idToFind = 3;
+        FilmItem[] actual = new FilmItem[]{manager.findById(idToFind)};
+        FilmItem[] expected = new FilmItem[]{four};
+
+        assertArrayEquals(expected, actual);
+    }
+*/
     @Test
     public void shouldGetAll() {
         FilmItem[] actual = manager.getItems();
@@ -77,4 +147,5 @@ class AfishaManagerTest {
         };
         assertArrayEquals(expected, actual);
     }
+
 }
