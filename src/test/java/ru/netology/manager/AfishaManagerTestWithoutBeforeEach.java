@@ -39,11 +39,11 @@ class AfishaManagerTestWithoutBeforeEach {
         FilmItem[] actual = manager.getAll(countFilms);
 
         FilmItem[] expected = new FilmItem[]{
-                first,
-                second,
-                third,
+                six,
+                five,
                 four,
-                five
+                third,
+                second
         };
 
         assertArrayEquals(expected, actual);
