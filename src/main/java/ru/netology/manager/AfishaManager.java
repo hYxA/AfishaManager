@@ -35,14 +35,21 @@ public class AfishaManager {
 
     public FilmItem[] getItems() {
 
-        FilmItem[] result = new FilmItem[countFilms];
+        FilmItem[] draftResult = new FilmItem[countFilms];
+        int counter = 0;
         // перебираем результаты
         for (int i = 0; i < countFilms; i++) {
             int index = items.length - i - 1;
             if (items[index] != null) {
-                result[i] = items[index];
+                // выборка ненулевых значений
+                draftResult[counter] = items[index];
+                counter += 1;
             }
         }
+        // создание массива с нужной длиной
+        FilmItem[] result = new FilmItem[counter];
+        arraycopy(draftResult, 0, result, 0, counter);
+
         return result;
     }
 }

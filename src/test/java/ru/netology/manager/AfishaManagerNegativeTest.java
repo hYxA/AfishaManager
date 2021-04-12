@@ -1,6 +1,5 @@
 package ru.netology.manager;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.FilmItem;
 
@@ -10,14 +9,12 @@ class AfishaManagerNegativeTest {
     AfishaManager manager10 = new AfishaManager();
     AfishaManager manager = new AfishaManager(5);
 
-
     private final FilmItem first = new FilmItem(
             1, 300, "first");
     private final FilmItem second = new FilmItem(
             2, 250, "second");
     private final FilmItem third = new FilmItem(
             3, 550, "third");
-
 
 
     @Test
@@ -29,9 +26,7 @@ class AfishaManagerNegativeTest {
         FilmItem[] expected = {
                 third,
                 second,
-                first,
-                null,
-                null
+                first
         };
         assertArrayEquals(expected, actual);
     }
@@ -45,14 +40,7 @@ class AfishaManagerNegativeTest {
         FilmItem[] expected = {
                 third,
                 second,
-                first,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
+                first
         };
         assertArrayEquals(expected, actual);
     }
